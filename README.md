@@ -35,39 +35,11 @@ The application assumes this default path:
 
 C:\Program Files\Tesseract-OCR\tesseract.exe
 
-perl
-Copy
-Edit
-
 ### 3. Install Required Python Packages
 
 Open Command Prompt and run:
 
-```bash
-pip install pytesseract pyautogui pillow keyboard requests opencv-python numpy
-4. Install Ollama and Pull the Model
-Download Ollama from ollama.com.
-Pull the required model using:
-
-bash
-Copy
-Edit
-ollama pull phi3:latest
-Start the local model server with:
-
-bash
-Copy
-Edit
-ollama serve
-Usage
-Start the application:
-
-bash
-Copy
-Edit
-python screen_bot.py
-Once running:
-```
+```pip install -r requirements.txt```
 
 
 Alt + R: Select a region of the screen
@@ -89,6 +61,7 @@ Screenshots
 ![Preview 3](assets/preview3.png)
 
 ## Project Goals
+
 Seamless integration of OCR with Python desktop automation
 
 Simple communication with a local LLM using HTTP APIs
@@ -98,6 +71,7 @@ Fast, reliable native GUI for real-time productivity
 Fully offline functionality with privacy-first design
 
 # Troubleshooting
+
 If tesseract.exe is not found, check or update the TESSERACT_PATH variable in the script
 
 Ensure ollama serve is running in the background
@@ -107,8 +81,10 @@ If hotkeys or GUI features are unresponsive, try running the script as administr
 Adjust Windows screen scaling settings for better OCR results 
 
 # License
+
 This project is licensed under the MIT License.
 
 ### Author
+
 Saurabh850
 Focused on building offline-first, automation-enhanced AI tools for personal computing.
