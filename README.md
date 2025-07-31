@@ -1,6 +1,4 @@
-
-
-OCR AI Assistant-
+### OCR AI Assistant
 
 This is a Windows automation tool that combines OCR and a local LLM to extract screen text and provide AI-driven insights all fully offline, privacy-friendly, and fast.
 
@@ -57,7 +55,7 @@ Open Command Prompt and run the following command to install all necessary libra
 Bash
 
 
-(IMPORTANT)
+## (IMPORTANT)
 
 pip install pytesseract pyautogui pillow keyboard requests opencv-python numpy
 4. Ollama (Local LLM)
