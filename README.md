@@ -23,16 +23,19 @@ Translate or summarize on-screen content with a single hotkey.
 
 Serve as an accessible tool for visually impaired users or for quick accessibility automation.
 
+
 ## Preview
 
-### Screen Capture Selection
+### OCR Front
 ![Preview 1](assets/preview1.png)
 
-### OCR Output & Answer
+### Screen Capture Selection
 ![Preview 2](assets/preview2.png)
 
-### GitHub Repository Setup
+### OCR Output & Answer
 ![Preview 3](assets/preview3.png)
+
+
 
 
 1. Main GUI and status bar
