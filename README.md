@@ -84,7 +84,7 @@ Adjust Windows screen scaling settings for better OCR results
 
 This project is licensed under the MIT License.
 
-### Author
+# Author
 
 Saurabh850
 Focused on building offline-first, automation-enhanced AI tools for personal computing.
