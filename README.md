@@ -1,32 +1,85 @@
-### OCR AI Assistant
+# OCR AI Assistant
 
-This is a Windows automation tool that combines OCR and a local LLM to extract screen text and provide AI-driven insights all fully offline, privacy-friendly, and fast.
+**OCR AI Assistant** is a lightweight Windows desktop tool that uses OCR and a locally hosted language model to extract screen text and provide intelligent, instant answers. Fully offline, privacy-respecting, and fast.
 
-This project lets users:
+![Preview](assets/preview1.png)
 
-Select a region of their screen using a global shortcut (Alt+R)
+## Features
 
-Extract any visible text from that region using Tesseract OCR.
+- Select any region of the screen using a global shortcut (Alt + R)
+- Extract text using Tesseract OCR
+- Send the text to a local AI model (Ollama) with a single hotkey (Alt + T)
+- View immediate, concise responses in a native GUI
+- No internet connection required after setup
 
-Send the extracted text to a locally hosted AI model via Ollama (Alt+T).
+## Example Use Cases
 
-Receive instant, concise answers in a native desktop GUI.
+- Understand or summarize content from videos, games, or presentations
+- Translate technical documentation and error messages instantly
+- Simplify on-screen instructions or dense paragraphs
+- Enable accessibility support for visually impaired users
 
-It is designed for speed, low-latency use, and privacy with no external APIs or internet access required after the initial setup.
+---
 
-Demo Use Cases
-Rapidly answer questions based on content in videos or games.
+## Installation
 
-Get instant help with error messages or technical documentation.
+### 1. Install Python (3.8+)
 
-Translate or summarize on-screen content with a single hotkey.
+Download Python from [python.org](https://www.python.org/).  
+During installation, make sure to check "Add Python to PATH".
 
-Serve as an accessible tool for visually impaired users or for quick accessibility automation.
+### 2. Install Tesseract OCR
+
+Download the Windows build from the [UB Mannheim repository](https://github.com/UB-Mannheim/tesseract/wiki).  
+The application assumes this default path:
+
+C:\Program Files\Tesseract-OCR\tesseract.exe
+
+perl
+Copy
+Edit
+
+### 3. Install Required Python Packages
+
+Open Command Prompt and run:
+
+```bash
+pip install pytesseract pyautogui pillow keyboard requests opencv-python numpy
+4. Install Ollama and Pull the Model
+Download Ollama from ollama.com.
+Pull the required model using:
+
+bash
+Copy
+Edit
+ollama pull phi3:latest
+Start the local model server with:
+
+bash
+Copy
+Edit
+ollama serve
+Usage
+Start the application:
+
+bash
+Copy
+Edit
+python screen_bot.py
+Once running:
+```
 
 
-## Preview
+Alt + R: Select a region of the screen
 
-### OCR Front
+Alt + T: Capture, extract, and send text to the local AI model
+
+The AI's answer will appear in a new window
+
+The status bar indicates system readiness and running services.
+
+Screenshots
+### Main Interface
 ![Preview 1](assets/preview1.png)
 
 ### Screen Capture Selection
@@ -35,83 +88,27 @@ Serve as an accessible tool for visually impaired users or for quick accessibili
 ### OCR Output & Answer
 ![Preview 3](assets/preview3.png)
 
-
-
-
-1. Main GUI and status bar
-2. Selecting a screen region (Alt+R)
-3. Answer returned by the local LLM (Alt+T)
-Installation
-1. Python (3.8+)
-Download and install Python from python.org.
-Make sure to enable "Add Python to PATH" during installation.
-
-2. Tesseract OCR
-Download and install Tesseract for Windows:
-Tesseract OCR - UB Mannheim builds
-
-The application is configured to look for the default installation path: C:\Program Files\Tesseract-OCR\tesseract.exe.
-
-3. Required Python Packages
-Open Command Prompt and run the following command to install all necessary libraries:
-
-Bash
-
-
-## (IMPORTANT)
-
-pip install pytesseract pyautogui pillow keyboard requests opencv-python numpy
-4. Ollama (Local LLM)
-Install Ollama from: https://ollama.com
-
-The application uses the phi3:latest model. Pull it with the following command:
-
-Bash
-
-
-## ollama pull phi3:latest
-The application is designed to automatically check for and attempt to start the Ollama service. However, it's good practice to ensure it's running, or simply run ollama serve manually if you encounter issues.
-
-Usage
-Run the script:
-
-Bash
-
-python screen_bot.py
-
-Once the GUI is running: The status bar at the bottom will indicate if all dependencies are ready.
-
-Press Alt+R to enter region selection mode. Drag a box over the desired area of the screen.
-
-Press Alt+T to capture the selected region, perform OCR, and send the text to the AI model.
-
-The AI's response will be displayed in a dialog window.
-
 ## Project Goals
+Seamless integration of OCR with Python desktop automation
 
-This project demonstrates:
+Simple communication with a local LLM using HTTP APIs
 
-Integration of OCR with Python desktop automation.
+Fast, reliable native GUI for real-time productivity
 
-Interaction with a local AI model using a standard HTTP API (requests library).
+Fully offline functionality with privacy-first design
 
-A user-friendly GUI for rapid productivity.
+# Troubleshooting
+If tesseract.exe is not found, check or update the TESSERACT_PATH variable in the script
 
-A robust, privacy-first design that is fully functional offline after initial setup.
+Ensure ollama serve is running in the background
 
-Troubleshooting
-Ensure tesseract.exe is installed at the expected location. You can modify the TESSERACT_PATH variable in the script if it's installed elsewhere.
+If hotkeys or GUI features are unresponsive, try running the script as administrator
 
-Make sure Ollama is running and the phi3:latest model is available.
+Adjust Windows screen scaling settings for better OCR results 
 
-If hotkeys or window focus features don't respond, try running the script as an administrator.
+# License
+This project is licensed under the MIT License.
 
-Adjusting screen scaling in Windows settings may improve OCR accuracy.
-
-License
-This project is licensed under the MIT License. You are free to use, modify, and distribute this tool with credit.
-
-Author
+### Author
 Saurabh850
-
-This tool is part of a collection of offline, automation-focused AI tools exploring the future of personal computing with local language models.
+Focused on building offline-first, automation-enhanced AI tools for personal computing.
