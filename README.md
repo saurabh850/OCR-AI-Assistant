@@ -1,5 +1,10 @@
 <<<<<<< HEAD
-OCR AI Assistant
+
+
+
+
+OCR AI Assistant-
+
 This is a Windows automation tool that combines OCR and a local LLM to extract screen text and provide AI-driven insights — all fully offline, privacy-friendly, and fast.
 
 Overview
