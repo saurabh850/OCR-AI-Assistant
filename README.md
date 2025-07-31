@@ -2,6 +2,8 @@
 
 **OCR AI Assistant** is a lightweight Windows desktop tool that uses OCR and a locally hosted language model to extract screen text and provide intelligent, instant answers. Fully offline, privacy-respecting, and fast.
 
+### Main Interface
+
 ![Preview](assets/preview1.png)
 
 ## Features
@@ -51,8 +53,6 @@ The AI's answer will appear in a new window
 The status bar indicates system readiness and running services.
 
 Screenshots
-### Main Interface
-![Preview 1](assets/preview1.png)
 
 ### Screen Capture Selection
 ![Preview 2](assets/preview2.png)
