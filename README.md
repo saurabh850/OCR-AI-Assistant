@@ -43,6 +43,7 @@ Open Command Prompt and run:
 
 ```pip install -r requirements.txt```
 
+# How to use:
 
 Alt + R: Select a region of the screen
 
